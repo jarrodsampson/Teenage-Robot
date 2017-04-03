@@ -1,0 +1,26 @@
+[
+  {
+    "image": "photo1.jpg",
+    "description": "Makin' It Rain"
+  },
+  {
+    "image": "photo2.jpg",
+    "description": "Music Video"
+  },
+  {
+    "image": "photo3.jpg",
+    "description": "Basketball Practice"
+  },
+  {
+    "image": "photo4.jpg",
+    "description": "Bearstack!"
+  },
+  {
+    "image": "photo5.jpg",
+    "description": "Sunday Shopping"
+  },
+  {
+    "image": "photo6.jpg",
+    "description": "Can't Touch This!"
+  }
+]
