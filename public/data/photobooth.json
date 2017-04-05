@@ -1,26 +1,26 @@
 [
   {
-    "image": "photo1.jpg",
-    "description": "Makin' It Rain"
+    "image": "ban1.jpg",
+    "description": "Freaked Out!"
   },
   {
-    "image": "photo2.jpg",
-    "description": "Music Video"
+    "image": "ban2.jpg",
+    "description": "Groovin' to some Tunes"
   },
   {
-    "image": "photo3.jpg",
-    "description": "Basketball Practice"
+    "image": "ban3.jpg",
+    "description": "Short-Circuited"
   },
   {
-    "image": "photo4.jpg",
-    "description": "Bearstack!"
+    "image": "ban4.jpg",
+    "description": "My Space"
   },
   {
-    "image": "photo5.jpg",
-    "description": "Sunday Shopping"
+    "image": "ban5.jpg",
+    "description": "In the Zone"
   },
   {
-    "image": "photo6.jpg",
-    "description": "Can't Touch This!"
+    "image": "ban6.jpg",
+    "description": "Kicking some butt!"
   }
 ]

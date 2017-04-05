@@ -25,6 +25,11 @@ nav .sideNav li a:hover {
     color:black;
 }
 
+.spacer-medium {
+    width: 100%;
+    height: 100px;
+}
+
 .spacer-small {
     width: 100%;
     height: 60px;
@@ -75,7 +80,7 @@ nav .brand-logo {
 }
 
 .brand-logo img {
-    width: 130px;
+    width: 170px;
     padding: 1px;
 }
 
@@ -153,6 +158,85 @@ p {
     color:black;
 }
 
+.titleIt {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    height: 100px;
+    transition: .6s all;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.titleIt:hover {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    font-size: 20pt;
+}
+.titleIt p {
+    padding-top: 0.5em;
+    transition: .6s all;
+}
+.titleIt p:hover {
+
+}
+
+.owl-carousel .owl-item {
+    margin: 0 0.5em 0 0.5em;
+}
+
+.photoBg h1 {
+    color:white;
+}
+
+.summaryBg {
+    background: url('../../public/images/back1.png') no-repeat 100px bottom;
+    background-size:37%;
+}
+
+.jennyBg {
+    background: #000;
+    color:white;
+    margin-bottom: -3em;
+}
+
+.descriptionBg {
+    background: url('../../public/images/desc1.png') #000;
+    background-size:cover;
+    height: 530px;
+}
+
+.descriptionDetails {
+        background: rgba(0,0,0,0.5);
+        border-radius: 10px;
+        color: white;
+        padding: 0 1em 0 1em;
+}
+
+.communityBg {
+    background: url('../../public/images/back2.png') no-repeat #000 scroll;
+    color:white;
+    margin-bottom: -2em;
+    position: relative;
+
+}
+
+.collection a.collection-item {
+    background: rgba(255,255,255,0.9)
+}
+
+.collection a.collection-item:hover {
+    background: rgba(255,255,255,1)
+}
+
+.floatImage img {
+            max-width: 171px;
+            position: absolute;
+            bottom: -9em;
+        right: 0em;
+}
+
 @media(max-width:992px) {
     .timeReddit {
         position: relative;
@@ -203,6 +287,7 @@ p {
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s;
+    margin-top:3em;
 }
 
 .cb-slideshow li div {
@@ -223,28 +308,38 @@ p {
     line-height: 200px;
 }
 
+.cb-slideshow li span {
+    background-size: cover;
+}
+
 .cb-slideshow li:nth-child(1) span {
-    background-image: url('https://unsplash.it/1980/1020/?random')
+    background: url('../../public/images/banner1.png') top;
+    background-size: cover;
 }
 .cb-slideshow li:nth-child(2) span {
-    background-image: url('https://unsplash.it/1980/1020/');
+    background: url('../../public/images/banner2.jpg') top;
+    background-size: cover;
     animation-delay: 6s;
 }
 
 .cb-slideshow li:nth-child(3) span {
-    background-image: url('https://unsplash.it/1980/1020/?random');
+    background: url('../../public/images/banner3.png') top;
+    background-size: cover;
     animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url('https://unsplash.it/1980/1020/?random');
+    background: url('../../public/images/banner4.jpg') top;
+    background-size: cover;
     animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) span {
-    background-image: url('https://unsplash.it/1980/1020/?random');
+    background: url('../../public/images/banner5.jpg') top;
+    background-size: cover;
     animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(6) span {
-    background-image: url('https://unsplash.it/1980/1020/?random');
+    background-image: url('../../public/images/banner6.png');
+    background-size: cover;
     animation-delay: 30s;
 }
 
@@ -290,4 +385,10 @@ p {
 }
 @media screen and (max-width: 600px) {
     .cb-slideshow li div h3 { font-size: 80px }
+}
+
+@media(max-width:640px) {
+    .brand-logo img {
+            width: 145px;
+    }
 }

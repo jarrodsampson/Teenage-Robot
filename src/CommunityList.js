@@ -19,7 +19,7 @@ class CommunityList extends Component {
         }, this);
         return (
             <div className="CommunityList col s12">
-                <div className="collection z-depth-3 left-align">
+                <div className="collection z-depth-5 left-align">
                     {communityList}
                 </div>
             </div>

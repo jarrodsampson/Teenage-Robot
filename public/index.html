@@ -6,13 +6,37 @@
     <meta name="Language" content="en">
     <meta name="description" content="Cloud-Based applications to recruit, train, and manage.">
     <meta name="keywords" content="keywords" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/images/favicon.png">
     <title>My Life As A Teenage Robot | Revamp</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <style>
       #root {min-height:700px;}
+
+      .loader {
+          min-height: 1500px;
+              top: 0;
+              left: 0;
+              background: rgba(0,0,0,0.95);
+              z-index: 9999;
+              width: 100%;
+              position: fixed;
+              color:white;
+      }
+      .loader .content {
+    margin-top:5%;
+}
+      .loader .content img {
+     max-width:150px;
+}
+
+.loader .progress {
+  width:30%;
+  margin:auto;
+}
+
+
 
     </style>
   </head>
@@ -30,10 +54,10 @@
             <li><a href="#photos">Photos</a></li>
             <li><a href="#jenny">Jenny</a></li>
             <li><a href="#community">Community</a></li>
-            <li><a href="//www.cartoonnetwork.com/video/we-bare-bears/" target="_blank" class="waves-effect waves-light btn cyan lighten-1">Watch</a></li>
+            <li><a href="//www.games-kids.com/my-life-as-a-teenage-robot-games.html" target="_blank" class="waves-effect waves-light btn cyan lighten-1">Games</a></li>
           </ul>
           <ul class="sideNav topnav side-nav" id="mobile-demo">
-            <img src="images/art2.jpg" alt="SideImagine" />
+            <img src="images/banner1.png" alt="SideImagine" />
             <li><a href="#about">About</a></li>
             <li><a href="#photos">Photos</a></li>
             <li><a href="#jenny">Jenny</a></li>
@@ -45,6 +69,18 @@
   </header>
 
   <main>
+
+    <div class="loader center-align">
+      <div class="content">
+        <img src="images/float1.png" width="200" alt="Loader" />
+        <h2>Loading...</h2>
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+
+      </div>
+    </div>
+
     <div id="root"></div>
   </main>
 
@@ -52,8 +88,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">We Bare Bears</h5>
-          <p class="grey-text text-lighten-4">A Cartoon Network Show.</p>
+          <h5 class="white-text">My Life As A Teenage Robot</h5>
+          <p class="grey-text text-lighten-4">Brought to you by Nickelodeon.</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>

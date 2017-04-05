@@ -21,7 +21,6 @@ export default class App extends Component {
             jenny: [],
             photos: [],
             community: [],
-            games: [],
             childVisible: false,
             details: {}
         };
@@ -30,23 +29,20 @@ export default class App extends Component {
     loadCommentsFromServer () {
 
         $.when(
-            $.get("//www.reddit.com/r/MyLifeAsATeenageRobot/new.json?limit=20"),
+            $.get("//www.reddit.com/r/MyLifeAsATeenageRobot/new.json?limit=15"),
             $.get("/data/robot.json"),
-            $.get("/data/photobooth.json"),
-            $.get("/data/games.json")
+            $.get("/data/photobooth.json")
 
-        ).then(function(community, jenny, photos, games) {
+        ).then(function(community, jenny, photos) {
             console.log(community);
             this.setState({
                 jenny: jenny[0],
                 photos: photos[0],
-                community: community[0].data.children,
-                games: games[0],
+                community: community[0].data.children
             });
             console.log(jenny[0]);
             console.log(photos[0]);
             console.log(community[0].data.children);
-            console.log(games[0]);
 
         }.bind(this));
 
@@ -89,14 +85,18 @@ export default class App extends Component {
           <div className="summaryBg">
               <div className="container">
                   <div className="wow fadeInLeft col s12 center-align scrollspy" id="about">
-                      <div className="col s12 spacer-small"></div>
+                      <div className="col s12 spacer-medium"></div>
                       <h1>About</h1>
 
                       <p>
-                          We Bare Bears follows three adoptive bear brothers: Grizzly, Panda and Ice Bear. The bears attempt to integrate with human society, such as by purchasing food, making human companions or trying to become famous on the Internet, although these attempts see the bears struggle to do so due to the civilized nature of humans and their own animal instincts. However, in the end, they figure out that they have each other for support. One notable aspect of the show's humor is the bears' ability to form a "bear stack". As its name implies, the bears stack on top of each other, which serves as their unique way of transportation.
+                        My Life as a Teenage Robot is an American animated science fantasy television series created by Rob Renzetti for Nickelodeon. The series follows the adventures of XJ-9, better known as Jenny Wakeman, a robot girl who attempts to juggle her duties of protecting Earth while trying to live a normal teenage life.
                       </p>
                       <p>
-                          <a className="waves-effect waves-light btn modal-trigger cyan lighten-1" href="https://en.wikipedia.org/wiki/We_Bare_Bears" target="_blank">Learn More</a>
+                        A state-of-the-art gynoid automaton sophisticated robot created by her mother Dr. Nora Wakeman, an elderly spinster robotics scientist, five years prior to the series. Jenny is Earth's protector, armed to the teeth with a wide range of weapons and devices, but all she really wants is to live the life of a normal teenager.
+                      </p>
+
+                      <p>
+                          <a className="waves-effect waves-light btn modal-trigger cyan lighten-1" href="https://en.wikipedia.org/wiki/My_Life_as_a_Teenage_Robot" target="_blank">Learn More</a>
                       </p>
                   </div>
 
@@ -114,16 +114,17 @@ export default class App extends Component {
 
           </div>
 
-          <div className="photoBg">
+          <div className="photoBg grey darken-4">
 
-              <div className="row scrollspy" id="photos">
+              <div className="scrollspy" id="photos">
                   <div className="col s12 center-align no-padding">
                       <div className="col s12 spacer-small"></div>
-                      <h1>Fun Times</h1>
+                      <h1>Get to Know Jenny</h1>
                       <div className="col s12 spacer-x-small"></div>
                       <div className="col l12 m12 s12 no-padding">
                           <PhotoList data={this.state.photos} />
                       </div>
+                      <div className="col s12 spacer-small"></div>
 
                   </div>
               </div>
@@ -131,29 +132,28 @@ export default class App extends Component {
 
           <div className="parallax-container">
               <div className="parallax"><img src="images/art1.jpg" alt="Banner" /></div>
-              <h2>On The Lookout</h2>
+              <h2>Out into the Galaxy</h2>
           </div>
 
-          <div className="bearBg">
-              <div className="containerLarge">
+          <div className="jennyBg">
 
-                  <div className="row wow bounceInRight scrollspy" id="jenny">
-                      <div className="col s12 center-align">
+                  <div className="row wow bounceInRight scrollspy no-padding" id="jenny">
+                      <div className="col s12 center-align no-padding">
                           <div className="col s12 spacer-small"></div>
                           <h1>Jenny</h1>
                           <div className="col s12 spacer-x-small"></div>
 
-                          <div className="col l12 m12 s12 theGirlsBox">
+                          <div className="col l12 m12 s12 no-padding">
                               <RobotList data={this.state.jenny} />
                           </div>
 
                           <div className="col s12 spacer-small" id="bearDetailSnap"></div>
                       </div>
                   </div>
-              </div>
           </div>
 
           <div className="communityBg">
+            <div className="container">
               <div className="row wow fadeInLeft col s12 center-align scrollspy" id="community">
                   <div className="col s12 spacer-small"></div>
                   <h1>The Community</h1>
@@ -163,6 +163,10 @@ export default class App extends Component {
                   <div className="col s12 spacer-small"></div>
 
               </div>
+            </div>
+            <div className="floatImage">
+                <img src="images/float1.png" alt="Float" />
+            </div>
           </div>
 
       </div>
